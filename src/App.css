@@ -1,0 +1,50 @@
+/* src/App.css */
+/* Дополнительные стили для App компонента */
+
+.app-container {
+  min-height: 100vh;
+}
+
+/* Плавные переходы между страницами */
+.page {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Стили для активной ссылки в навигации */
+.nav-item.active {
+  background: linear-gradient(45deg, #ff6b9d, #ff8fab) !important;
+  color: white !important;
+  transform: translateX(5px);
+}
+
+/* Дополнительные утилитарные классы */
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

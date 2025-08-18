@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❤️ Наша Любовь</title>
+    <meta name="description" content="Персональный сайт наших отношений с фотографиями, планами и воспоминаниями" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags -->
+    <meta property="og:title" content="❤️ Наша Любовь" />
+    <meta property="og:description" content="Персональный сайт наших отношений" />
+    <meta property="og:type" content="website" />
+    
+    <style>
+      /* Предотвращаем flash of unstyled content */
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* Начальная загрузка */
+      .initial-loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: white;
+        text-align: center;
+      }
+      
+      .initial-loading .heart {
+        font-size: 4rem;
+        animation: heartbeat 2s infinite;
+        margin-bottom: 1rem;
+      }
+      
+      @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Начальная загрузка -->
+      <div class="initial-loading">
+        <div class="heart">❤️</div>
+        <p>Загружаем наши воспоминания...</p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

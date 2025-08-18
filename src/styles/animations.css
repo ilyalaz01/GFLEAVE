@@ -1,0 +1,391 @@
+/* src/styles/animations.css */
+/* Анимации для сайта любви */
+
+/* ===== АНИМАЦИЯ СЕРДЦЕБИЕНИЯ ===== */
+@keyframes heartbeat {
+  0% { 
+    transform: scale(1);
+  }
+  25% { 
+    transform: scale(1.1);
+  }
+  50% { 
+    transform: scale(1.05);
+  }
+  75% { 
+    transform: scale(1.15);
+  }
+  100% { 
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 2s infinite;
+}
+
+/* ===== АНИМАЦИЯ АВТОСКРОЛЛЕРА ===== */
+@keyframes scroll {
+  0% { 
+    transform: translateY(100vh);
+  }
+  100% { 
+    transform: translateY(-200vh);
+  }
+}
+
+.auto-scroll {
+  animation: scroll 120s linear infinite;
+}
+
+/* Пауза анимации при наведении */
+.auto-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* ===== АНИМАЦИЯ ПОКАЧИВАНИЯ ФОТО ===== */
+@keyframes photoFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.photo-float {
+  animation: photoFloat 6s ease-in-out infinite;
+}
+
+.photo-float:nth-child(even) {
+  animation-delay: -3s;
+  animation-direction: reverse;
+}
+
+/* ===== АНИМАЦИЯ ТРЯСКИ ===== */
+@keyframes shake {
+  0%, 100% { 
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% { 
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% { 
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.6s ease-in-out;
+}
+
+/* ===== АНИМАЦИЯ ПОЯВЛЕНИЯ ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ===== АНИМАЦИЯ УВЕЛИЧЕНИЯ ===== */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 0.4s ease-out;
+}
+
+/* ===== АНИМАЦИЯ ПОДЪЕМА ===== */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* ===== АНИМАЦИЯ СКОЛЬЖЕНИЯ СЛЕВА ===== */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+/* ===== АНИМАЦИЯ СКОЛЬЖЕНИЯ СПРАВА ===== */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+/* ===== АНИМАЦИЯ ВРАЩЕНИЯ ===== */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+/* ===== АНИМАЦИЯ ПУЛЬСАЦИИ ===== */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 157, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 107, 157, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 157, 0);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* ===== АНИМАЦИЯ МЕРЦАНИЯ ===== */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+.twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* ===== АНИМАЦИЯ ВОЛНЫ ===== */
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+}
+
+.wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+/* ===== АНИМАЦИЯ РАДУЖНОГО ГРАДИЕНТА ===== */
+@keyframes rainbow {
+  0% { 
+    background-position: 0% 50%;
+  }
+  50% { 
+    background-position: 100% 50%;
+  }
+  100% { 
+    background-position: 0% 50%;
+  }
+}
+
+.rainbow-bg {
+  background: linear-gradient(45deg, #ff6b9d, #c471ed, #12d8fa, #f9ca24, #f0932b, #eb4d4b, #6c5ce7);
+  background-size: 400% 400%;
+  animation: rainbow 3s ease infinite;
+}
+
+/* ===== АНИМАЦИЯ ПЛАВАЮЩИХ СЕРДЕЧЕК ===== */
+@keyframes floatingHearts {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 2rem;
+  animation: floatingHearts 8s linear infinite;
+  pointer-events: none;
+}
+
+.floating-heart:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-heart:nth-child(2) {
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.floating-heart:nth-child(3) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.floating-heart:nth-child(4) {
+  left: 40%;
+  animation-delay: 3s;
+}
+
+.floating-heart:nth-child(5) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+/* ===== АНИМАЦИЯ КЛЕЙКОЙ ЛЕНТЫ ===== */
+@keyframes tapeShine {
+  0% {
+    background-position: -100px;
+  }
+  100% {
+    background-position: 100px;
+  }
+}
+
+.tape-shine {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.8) 0%,
+    rgba(255, 215, 0, 1) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 215, 0, 1) 75%,
+    rgba(255, 215, 0, 0.8) 100%
+  );
+  background-size: 200px 100%;
+  animation: tapeShine 3s ease-in-out infinite;
+}
+
+/* ===== ЗАДЕРЖКИ АНИМАЦИИ ===== */
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* ===== АНИМАЦИЯ ПРИ НАВЕДЕНИИ ===== */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.hover-rotate {
+  transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(5deg);
+}
+
+/* ===== АНИМАЦИЯ ЗАГРУЗКИ ===== */
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg);
+  }
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* ===== МЕДИА-ЗАПРОСЫ ДЛЯ АНИМАЦИЙ ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
