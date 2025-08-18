@@ -1,0 +1,21 @@
+// src/firebase/config.js
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCj77TINmqkmGfRBLSBU2YPx5T34HXVKV4",
+  authDomain: "relationship-81a2d.firebaseapp.com",
+  projectId: "relationship-81a2d",
+  storageBucket: "relationship-81a2d.firebasestorage.app",
+  messagingSenderId: "529069482105",
+  appId: "1:529069482105:web:d59e6b2d7a8eaf4e4434a8",
+  measurementId: "G-36CS4NKKXG"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firestore
+export const db = getFirestore(app);
+
+export default app;
